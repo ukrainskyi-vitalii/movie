@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./favicon.ico">
+</head>
+
+<body>
+    <header class="header">
+        <section class="section" id="header">
+            <form id="form-search" method="post">
+                <input type="search" name="query" placeholder="Search" autofocus autocomplete="off">
+            </form>
+            <select name="sort" id="sort">
+                <option value="popularity.desc">Most Popular</option>
+                <option value="popularity.asc">Less Popular</option>
+            </select>
+            <div class="pagination"></div>
+        </section>
+    </header>
+
+    <main class="main">
+        <section class="section" id="video">
+            <div class="movie-section"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container container-footer">
+            <div class="copyrights">
+                <span>©</span>
+                <span>2022</span>
+                <span><a href="https://github.com/ukrainskyi-vitalii" target="blank">github</a></span>
+            </div>
+            <div class="school">
+                <a href="https://rs.school/js-stage0/" target="blank" class="rs-school"></a>
+            </div>
+            <ul class="social-list">
+                <li class="social-item">
+                    <a href="https://instagram.com/" target="blank"></a>
+                </li>
+                <li class="social-item">
+                    <a href="https://www.facebook.com/" target="blank"></a>
+                </li>
+                <li class="social-item">
+                    <a href="https://twitter.com/" target="blank"></a>
+                </li>
+                <li class="social-item">
+                    <a href="https://www.pinterest.ru/" target="blank"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="./assets/js/movie.js"></script>
+</body>
+
+</html>
