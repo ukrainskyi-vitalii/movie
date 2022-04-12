@@ -1,0 +1,287 @@
+:root {
+    --color-main: #100e19;
+    --color-second: #000000;
+    --color-third: #363648;
+    --color-white: #ffffff;
+    --color-brown: #A52A2A;
+    --color-header: #36367D;
+    --font1: 20px;
+    --font2: 14px;
+    --font-family1: "Inter", sans-serif;
+    --line-height1: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: var(--font1);
+    font-weight: normal;
+    font-style: normal;
+    background-color: var(--color-main);
+    color: var(--color-white);
+    line-height: var(--line-height1);
+    margin: 0;
+}
+
+.movie-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.movie {
+    width: 300px;
+    height: 540px;
+    position: relative;
+}
+
+.movie img {
+    width: inherit;
+    border-radius: 6px;
+}
+
+.movie-description {
+    font-size: var(--font2);
+    position: absolute;
+    bottom: 90px;
+    opacity: 0;
+    transition: opacity 1s;
+    width: inherit;
+    padding: 10px;
+    overflow: hidden;
+    text-align: justify;
+    background-color: var(--color-third);
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+.movie:hover {
+    cursor: pointer;
+}
+
+.movie:hover .movie-description {
+    opacity: 0.9;
+}
+
+.movie-title {
+    background-color: var(--color-main);
+}
+
+.movie-title h2 {
+    font-size: 20px;
+}
+
+.movie-rate {
+    background-image: url(../svg/star.svg);
+    position: absolute;
+    top: -21px;
+    width: 55px;
+    height: 53px;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 6%;
+    color: var(--color-brown);
+    font-weight: bold;
+    font-size: var(--font2);
+    left: 40%;
+}
+
+#header {
+    height: 122px;
+    background-color: var(--color-header);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: linear-gradient(180deg, var(--color-header) 77%, var(--color-main) 100%);
+}
+
+#form-search {
+    width: 50%;
+    min-width: 300px;
+}
+
+#form-search input {
+    width: 100%;
+    border: 2px solid var(--color-main);
+    background-color: transparent;
+    border-radius: 30px;
+    padding: 10px;
+    color: var(--color-white);
+    font-size: var(--font1);
+    font-weight: bold;
+}
+
+#form-search input:focus {
+    background-color: var(--color-main);
+}
+
+#form-search::-webkit-search-cancel-button {
+    position: relative;
+    right: 20px;
+}
+
+#video {
+    padding: 30px;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: var(--color-black);
+    columns: var(--color-white);
+    color: var(--color-white);
+}
+
+.rs-school {
+    background-image: url('../svg/rs_school_js.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 37px;
+    display: inline-block;
+}
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+}
+
+.social-list {
+    gap: 20px;
+    width: 188px;
+    height: 50px;
+    padding-inline-start: 0;
+}
+
+.social-item,
+.social-item a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    transition: 0.3s;
+}
+
+.social-item {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.social-item:nth-child(1) {
+    background-image: url("../svg/instagram.svg");
+}
+
+.social-item:nth-child(2) {
+    background-image: url("../svg/facebook.svg");
+}
+
+.social-item:nth-child(3) {
+    background-image: url("../svg/twitter.svg");
+}
+
+.social-item:nth-child(4) {
+    background-image: url("../svg/pinterest.svg");
+}
+
+.copyrights {
+    display: flex;
+    gap: 20px;
+}
+
+.container-footer a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.school {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    text-align: center;
+    padding: 6px;
+    width: 150px;
+}
+
+.logo:hover,
+a:hover,
+.social-item:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
+
+.pagination {
+    display: flex;
+    width: 22%;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.pagination .pagination-item {
+    color: var(--color-third);
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 2px solid var(--color-main);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.pagination .pagination-item.active {
+    color: var(--color-white);
+    background-color: var(--color-header);
+    border-color: var(--color-white);
+}
+
+#sort {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-third);
+    padding: 0.4em 1.4em 0.5em 0.8em;
+    width: 20%;
+    min-width: 150px;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgb(0 0 0 / 4%);
+    border-radius: 0.5em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: #fff;
+    background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E), linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+    background-repeat: no-repeat, repeat;
+    background-position: right 0.7em top 50%, 0 0;
+    background-size: 0.65em auto, 100%;
+}
+
+#sort::-ms-expand {
+    display: none;
+}
+
+#sort:hover {
+    border-color: #888;
+}
+
+#sort:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: #222;
+    outline: none;
+}
+
+#sort option {
+    font-weight: normal;
+}
